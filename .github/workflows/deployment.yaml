@@ -1,7 +1,7 @@
 name: deployment
 on:
   push:
-     branches:
+    branches:
       - master
 
 jobs:
@@ -9,11 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - name: checkout repository
-       uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-     - name: Create a new directory
-        run: mkdir classwork
+      - name: Create a new directory
+        run: mkdir -p classwork
 
-     - name: Create a new text file and add content
+      - name: Create a new text file and add content
         run: echo "my name is masturah" > classwork/inventory.txt
+
