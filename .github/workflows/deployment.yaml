@@ -17,5 +17,3 @@ jobs:
 
      - name: Create a new text file and add content
         run: echo "my name is masturah" > project/inventory.txt
-
-# made an update
