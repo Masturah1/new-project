@@ -15,9 +15,12 @@ jobs:
       - name: Install Docker
         run: |
           sudo apt-get update
+          sudo apt-get upgrade
           sudo apt-get install -y curl
+          curl -fsSL https://get.docker.com
           curl -fsSL https://get.docker.com | sudo sh
-          sudo docker run hello-world
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sudo sh get-docker.sh
 
       - name: Create a new directory
         run: mkdir -p classwork
