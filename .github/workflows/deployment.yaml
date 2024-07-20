@@ -15,6 +15,14 @@ jobs:
       - name: Install Docker
         run: ./docker.sh  
 
+      - name: Install Apache
+        run:  |
+          sudo apt update
+          sudo apt install apache
+          sudo systemctl status apache
+          sudo systemctl enable apache
+          sudo systemctl start apache
+
       - name: Create a new directory
         run: mkdir -p classwork
 
