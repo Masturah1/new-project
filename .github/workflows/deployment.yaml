@@ -18,10 +18,10 @@ jobs:
       - name: Install Apache
         run:  |
           sudo apt update
-          sudo apt install apache
-          sudo systemctl status apache
-          sudo systemctl enable apache
-          sudo systemctl start apache
+          sudo apt install apache2
+          sudo systemctl status apache2
+          sudo systemctl enable apache2
+          sudo systemctl start apache2
 
       - name: Create a new directory
         run: mkdir -p classwork
