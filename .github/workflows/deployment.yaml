@@ -1,0 +1,21 @@
+name: deployment
+on:
+  push:
+     branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: checkout repository
+       uses: actions/checkout@v3
+
+     - name: Create a new directory
+        run: mkdir -p project
+
+     - name: Create a new text file and add content
+        run: echo "my name is masturah" > project/inventory.txt
+
+# made an update
